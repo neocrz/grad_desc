@@ -26,6 +26,7 @@
             (python.withPackages (python-pkgs: with python-pkgs; [
               jupyterlab
               matplotlib
+              # manim
               pandas
               numpy
               seaborn
