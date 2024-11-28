@@ -1,7 +1,7 @@
 {
   description = "A Nix-flake-based Python development environment";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "pinned-nixpkgs";
   
   outputs = { self, nixpkgs }:
     let
@@ -26,7 +26,8 @@
             (python.withPackages (python-pkgs: with python-pkgs; [
               jupyterlab
               matplotlib
-              # manim
+              manim
+              manim-slides
               pandas
               numpy
               seaborn
